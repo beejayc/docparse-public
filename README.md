@@ -3,7 +3,8 @@
 Local, batch-first document parser for RAG. It converts mixed enterprise files into reading-order
 markdown plus a block-level JSON sidecar in which every block carries a page number, a bounding box
 and a type, so a RAG system can cite back to the exact place on the page. Chunking is out of scope:
-docparse stops at markdown + blocks.
+docparse stops at markdown + blocks. 
+Copyright 2026 <Balaji Chandrasekaran>
 
 - **Engine:** [LightOnOCR-3](https://huggingface.co/lightonai/LightOnOCR-3-0.8B) (Apache-2.0), 0.8B for
   all pages, 4B for pages that fail QA, served by [vLLM](https://github.com/vllm-project/vllm).
@@ -189,7 +190,10 @@ docparse is glue around other people's work. Thanks to:
 - [LibreOffice](https://www.libreoffice.org/) (run as a separate process) for DOCX/PPTX conversion.
 - Evaluation: [olmOCR-Bench](https://github.com/allenai/olmocr) from Ai2 and [OmniDocBench](https://github.com/opendatalab/OmniDocBench) from OpenDataLab. The scorers in `src/docparse/eval/` are local re-implementations written for this project and give approximate results, not the official numbers.
 - Libraries: Pillow, PyArrow, Polars, Pydantic, Typer, httpx, lxml, openpyxl, python-oxmsg, markdownify, rapidfuzz, lingua-language-detector, puremagic and PyYAML.
+- https://huggingface.co/spaces/uv-scripts/run-on-jobs?model=lightonai%2FLightOnOCR-3-0.8B
+- https://danielvanstrien.xyz/
+- Inspired by the post https://lnkd.in/p/ePeBMizs
 
-## Licence
+## License
 
 Apache License 2.0. See [LICENSE](LICENSE). Dependencies keep their own licences.
