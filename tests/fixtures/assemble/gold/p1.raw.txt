@@ -1,0 +1,9 @@
+![header](60,20,940,50) ACME Quarterly Report
+
+![title](60,80,940,130) **Quarterly Report 2026**
+
+![text](60,150,940,300) This report summarises revenue and costs across all regions. Revenue grew in every region.
+
+![image](100,320,900,600) Bar chart of revenue per region, growing from left to right.
+
+![page_number](480,950,520,975) 1

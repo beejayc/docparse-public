@@ -1,0 +1,14 @@
+.scratch/
+.venv/
+out/
+work/
+manifest/
+*.parquet
+__pycache__/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+dist/
+dataset/
+docker/.env.vllm

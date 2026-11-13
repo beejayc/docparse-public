@@ -1,0 +1,19 @@
+![header_image](420,50,630,137) logo "HAL archives-ouvertes.fr"
+
+![title](136,250,914,375) ## Une démarche d’amélioration de la qualité du contenu du dossier patient en odontologie: étude d’une évaluation des pratiques professionnelles en milieu hospitalier et en pratique libérale à partir d’une grille d’évaluation commune
+
+![text](440,384,609,400) Jeanne Bardinet
+
+![title](140,461,378,479) ### To cite this version:
+
+![text](129,494,940,538) Jeanne Bardinet. Une démarche d’amélioration de la qualité du contenu du dossier patient en odontologie: étude d’une évaluation des pratiques professionnelles en milieu hospitalier et en pratique libérale à partir d’une grille d’évaluation commune. Chirurgie. 2015. dumas-01192617
+
+![text](345,672,652,688) **HAL Id:** dumas-01192617
+
+![text](236,699,760,716) **https://dumas.ccsd.cnrs.fr/dumas-01192617**
+
+![text](398,727,600,740) Submitted on 3 Sep 2015
+
+![text](92,801,492,898) **HAL** is a multi-disciplinary open access archive for the deposit and dissemination of scientific research documents, whether they are published or not. The documents may come from teaching and research institutions in France or abroad, or from public or private research centers.
+
+![text](504,803,904,898) L’archive ouverte pluridisciplinaire **HAL**, est destinée au dépôt et à la diffusion de documents scientifiques de niveau recherche, publiés ou non, émanant des établissements d’enseignement et de recherche français ou étrangers, des laboratoires publics ou privés.

@@ -1,0 +1,30 @@
+# GB10 cores (CPU part in /proc/cpuinfo): X925 (0xd85, performance) = 5-9,15-19; A725 (0xd87, efficiency) = 0-4,10-14.
+name: gb10
+endpoint: http://localhost:8000
+vllm:
+  image: vllm/vllm-openai:v0.33.0-aarch64
+  models:
+    fast:     {id: lightonai/LightOnOCR-3-0.8B, revision: 36d8636925327c671bd8e479c517a004f7566bd9}
+    accurate: {id: lightonai/LightOnOCR-3-4B,   revision: b71010f095dc3735de7ee6b9969bff8f8f50b39a}
+  max_num_seqs: 256
+  api_servers: 2
+  gpu_memory_utilization: 0.60
+  max_model_len: 12288
+  max_num_batched_tokens: 16384
+  cpuset: "5-8"      # X925
+render:
+  mode: direct            # direct | supersample
+  longest_side_px: 2048
+  workers: 1
+  cpuset: "9,15-19"  # X925
+  pdf_cache_size: 4
+  png_compress_level: 1
+cpu_other:
+  workers: 10
+  cpuset: "0-4,10-14"  # A725
+  nice: 10
+sampling:
+  temperature: 0.2
+  top_p: 0.9
+  max_tokens: {pass1: 4096, pass2: 8192}
+measured: {render_s_per_page: 0.0686, render_s_per_page_supersample: 0.1821, render_s_per_page_a725: 0.1254, pages_per_s: 0.945, out_tokens_per_page: 1531, gpu_sm_util_pct: 95.7, kv_cache_tokens_08b: 3858432, kv_cache_tokens_4b: 1246241}

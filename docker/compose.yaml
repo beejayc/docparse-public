@@ -1,0 +1,56 @@
+# vLLM service. Defaults match config/profiles/generic.yaml, so `docker compose run parser ...`
+# works with no setup. `make up PROFILE=x MODEL=fast|accurate` overrides them from a profile
+# (python -m docparse.vlm.serve renders docker/.env.vllm).
+services:
+  vllm:
+    image: ${VLLM_IMAGE:-vllm/vllm-openai:v0.33.0}
+    command: >
+      --model ${MODEL_ID:-lightonai/LightOnOCR-3-0.8B}
+      --revision ${MODEL_REVISION:-36d8636925327c671bd8e479c517a004f7566bd9}
+      --trust-remote-code
+      --default-chat-template-kwargs '{"enable_thinking": false}'
+      --limit-mm-per-prompt '{"image": 1}'
+      --max-model-len ${MAX_MODEL_LEN:-12288}
+      --max-num-batched-tokens ${MAX_BATCHED_TOKENS:-16384}
+      --max-num-seqs ${MAX_NUM_SEQS:-128}
+      --gpu-memory-utilization ${GPU_UTIL:-0.85}
+      --api-server-count ${API_SERVERS:-1}
+      --port 8000
+    ports:
+      - "127.0.0.1:8000:8000"
+    cpuset: "${VLLM_CPUSET:-}"
+    ipc: host
+    volumes:
+      - ${HF_HOME:-~/.cache/huggingface}:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+      start_period: 120s
+    restart: "no"
+
+  # One command: docker compose -f docker/compose.yaml run --rm parser parse /in /out
+  # Set INPUT_DIR and OUTPUT_DIR (host folders); starts vllm and waits until it is healthy.
+  parser:
+    build:
+      context: ..
+      dockerfile: docker/parser.Dockerfile
+    image: docparse-parser:local
+    depends_on:
+      vllm:
+        condition: service_healthy
+    environment:
+      DOCPARSE_PROFILE: ${DOCPARSE_PROFILE:-generic}
+      DOCPARSE_ENDPOINT: ${DOCPARSE_ENDPOINT:-http://vllm:8000}
+    volumes:
+      - ${INPUT_DIR:-../input}:/in:ro
+      - ${OUTPUT_DIR:-../output}:/out
+    profiles: ["run"]

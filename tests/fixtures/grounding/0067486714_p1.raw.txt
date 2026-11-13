@@ -1,0 +1,70 @@
+![text](117,92,606,108) [Case i] The following error bounds hold true for some $M > 0$ .
+
+![text](116,109,421,127) (i-1) $0 \leq \mathbb{E}[h(\hat{x}_\eta)] - h^* \leq \mathbf{Err}_\eta + \eta M$ .
+
+![text](115,124,709,146) (i-2) $\frac{\mu_f}{2} \mathbb{E}[\|\hat{x}_\eta - x^*\|^2] - \|\nabla f(x^*)\| \mathbb{E}[\text{dist}(\hat{x}_\eta, X_h^*)] \leq \mathbb{E}[f(\hat{x}_\eta)] - f^* \leq \frac{1}{\eta} \mathbf{Err}_\eta$ .
+
+![text](115,146,726,168) (i-3) If $\mu_f > 0$ , then $\mathbb{E}[\|\hat{x}_\eta - x^*\|^2] \leq \frac{2}{\mu_f} \left( \|\nabla f(x^*)\| \mathbb{E}[\text{dist}(\hat{x}_\eta, X_h^*)] + \frac{1}{\eta} \mathbf{Err}_\eta \right)$ .
+
+![text](117,169,873,185) [Case ii] Suppose $X_h^*$ is $\alpha$ -weak sharp with order $\kappa \geq 1$ . Then, the following holds for some $M > 0$ .
+
+![text](116,186,423,203) (ii-1) $0 \leq \mathbb{E}[h(\hat{x}_\eta)] - h^* \leq \mathbf{Err}_\eta + \eta M$ .
+
+![text](115,203,737,227) (ii-2) $\frac{\mu_f}{2} \mathbb{E}[\|\hat{x}_\eta - x^*\|^2] - \|\nabla f(x^*)\| \sqrt[\kappa]{\frac{1}{\alpha} (\mathbf{Err}_\eta + \eta M)} \leq \mathbb{E}[f(\hat{x}_\eta)] - f^* \leq \frac{1}{\eta} \mathbf{Err}_\eta$ .
+
+![text](115,227,747,251) (i-3) If $\mu_f > 0$ , then $\mathbb{E}[\|\hat{x}_\eta - x^*\|^2] \leq \frac{2}{\mu_f} \left( \|\nabla f(x^*)\| \sqrt[\kappa]{\frac{1}{\alpha} (\mathbf{Err}_\eta + \eta M)} + \frac{1}{\eta} \mathbf{Err}_\eta \right)$ .
+
+![text](117,251,845,268) [Case iii] If $X_h^*$ is $\alpha$ -weak sharp with order $\kappa = 1$ and $\eta \leq \frac{\alpha}{2\|\nabla f(x^*)\|}$ , then the following holds.
+
+![text](116,270,389,288) (iii-1) $0 \leq \mathbb{E}[h(\hat{x}_\eta)] - h^* \leq 2 \mathbf{Err}_\eta$ .
+
+![text](116,288,637,309) (iii-2) $\frac{\mu_f}{2} \mathbb{E}[\|\hat{x}_\eta - x^*\|^2] - \frac{2\|\nabla f(x^*)\|}{\alpha} \mathbf{Err}_\eta \leq \mathbb{E}[f(\hat{x}_\eta)] - f^* \leq \frac{1}{\eta} \mathbf{Err}_\eta$ .
+
+![text](116,309,497,329) (iii-3) If $\mu_f > 0$ , then $\mathbb{E}[\|\hat{x}_\eta - x^*\|^2] \leq \frac{2}{\eta \mu_f} \mathbf{Err}_\eta$ .
+
+![text](114,351,884,402) Proof. (i-1) In view of the definition of $\mathbf{Err}_\eta$ and $f_\eta$ , we have $\mathbb{E}[h(\hat{x}_\eta) + \eta f(\hat{x}_\eta)] - f_\eta^* \leq \mathbf{Err}_\eta$ . Also, from the definition of $f_\eta^*$ , we have $f_\eta^* \leq f_\eta(x^*) = h^* + \eta f^*$ . From the preceding two relations, we obtain
+
+![formula](334,414,887,436) $$
+\mathbb{E}[h(\hat{x}_\eta)] - h^* + \eta(\mathbb{E}[f(\hat{x}_\eta)] - f^*) \leq \mathbf{Err}_\eta.
+\quad (2)
+$$
+
+![text](115,447,883,496) By invoking Assumption 1, we have $\mathbb{E}[f(\hat{x}_\eta)] > -\infty$ . Therefore, there exists some $M > 0$ such that $f^* - \mathbb{E}[f(\hat{x}_\eta)] < M$ . As a result, we obtain $\mathbb{E}[h(\hat{x}_\eta)] - h^* \leq \mathbf{Err}_\eta + \eta M$ . From $\hat{x}_\eta \in X$ , we also have $\mathbb{E}[h(\hat{x}_\eta)] - h^* \geq 0$ . This completes the proof of (i-1).
+
+![text](115,498,884,531) (i-2) The upper bound holds in view of (2) and that $\mathbb{E}[h(\hat{x}_\eta)] - h^* \geq 0$ . To show the lower bound, from the convexity of $f$ , we may write
+
+![formula](273,542,726,564) $$
+\frac{\mu_f}{2} \mathbb{E}[\|\hat{x}_\eta - x^*\|^2] + \nabla f(x^*)^\top \mathbb{E}[(\hat{x}_\eta - x^*)] \leq \mathbb{E}[f(\hat{x}_\eta)] - f^*,
+$$
+
+![text](115,575,884,609) where the expectation is taken with respect to the random variables generated in the method $\mathcal{M}$ . Note that $\nabla f(x^*)^\top \mathbb{E}[(\hat{x}_\eta - x^*)]$ is not necessarily nonnegative. We may write
+
+![formula](190,618,806,642) $$
+\frac{\mu_f}{2} \mathbb{E}[\|\hat{x}_\eta - x^*\|^2] + \nabla f(x^*)^\top \mathbb{E}[(\hat{x}_\eta - \Pi_{X_h^*}[\hat{x}_\eta] + \Pi_{X_h^*}[\hat{x}_\eta] - x^*)] \leq \mathbb{E}[f(\hat{x}_\eta)] - f^*.
+$$
+
+![text](115,655,734,677) In view of $\Pi_{X_h^*}[\hat{x}_\eta] \in X_h^*$ , we have $\nabla f(x^*)^\top \mathbb{E}\left[\left(\Pi_{X_h^*}[\hat{x}_\eta] - x^*\right)\right] \geq 0$ . We obtain
+
+![formula](247,692,751,716) $$
+\frac{\mu_f}{2} \mathbb{E}[\|\hat{x}_\eta - x^*\|^2] + \nabla f(x^*)^\top \mathbb{E}\left[\left(\hat{x}_\eta - \Pi_{X_h^*}[\hat{x}_\eta]\right)\right] \leq \mathbb{E}[f(\hat{x}_\eta)] - f^*
+$$
+
+![text](115,727,515,743) Invoking the Cauchy-Schwarz inequality, we obtain
+
+![formula](242,755,756,780) $$
+\frac{\mu_f}{2} \mathbb{E}[\|\hat{x}_\eta - x^*\|^2] - \|\nabla f(x^*)\| \left\|\mathbb{E}\left[\hat{x}_\eta - \Pi_{X_h^*}[\hat{x}_\eta]\right]\right\| \leq \mathbb{E}[f(\hat{x}_\eta)] - f^*.
+$$
+
+![text](116,792,452,807) Invoking the Jensen’s inequality, we obtain
+
+![formula](241,818,756,844) $$
+\frac{\mu_f}{2} \mathbb{E}[\|\hat{x}_\eta - x^*\|^2] - \|\nabla f(x^*)\| \mathbb{E}\left[\left\|\hat{x}_\eta - \Pi_{X_h^*}[\hat{x}_\eta]\right\|\right] \leq \mathbb{E}[f(\hat{x}_\eta)] - f^*.
+$$
+
+![text](115,859,787,879) Noting that $\mathbb{E}[\text{dist}(\hat{x}_\eta, X_h^*)] = \mathbb{E}\left[\left\|\hat{x}_\eta - \Pi_{X_h^*}[\hat{x}_\eta]\right\|\right]$ , we obtain the lower bound in (i-2).
+
+![text](116,880,449,896) (i-3) This result follows directly from (i-2).
+
+![text](116,898,400,913) (ii-1) This result is identical to (i-1).
+
+![page_number](491,934,505,950) 6

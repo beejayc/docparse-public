@@ -1,0 +1,10 @@
+![header](60,20,940,50) ACME Quarterly Report
+
+![table+](60,70,940,300) <table>
+<thead><tr><th>Region</th><th>Revenue</th><th>Costs</th></tr></thead>
+<tbody>
+<tr><td>R3</td><td>300</td><td>120</td></tr>
+<tr><td>R4</td><td>400</td><td>160</td></tr>
+</tbody></table>
+
+![text](60,330,940,420) Totals are shown above. Die Zahlen sind in Tausend Euro angegeben.

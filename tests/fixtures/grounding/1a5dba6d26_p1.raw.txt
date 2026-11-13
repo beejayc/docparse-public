@@ -1,0 +1,59 @@
+![header](123,75,535,88) 杜承勇: Gromov–Witten 不变量沿曲线与曲面的加权吹胀公式
+
+![title](121,116,438,134) ## 2.1 $(\underline{X}_a, Z_a)$ 的相对轨形 GW- 不变量
+
+![text](124,150,884,187) 类似于绝对轨形 GW- 不变量, $(\underline{X}_a, Z_a)$ 的相对轨形 GW- 理论中的赋值映射的像落在 $\underline{X}_a$ 与 $Z_a$ 的惯性轨形中. 我们前面已经分析过它们的惯性轨形, 即:
+
+![formula](325,201,683,237) $$
+(\underline{1X}_a, \underline{1Z}_a) = (\underline{X}_a \sqcup \bigsqcup_{s \in D_a, s > 0} Z_a(s), \bigsqcup_{s \in D_a} Z_a(s)).
+$$
+
+![text](157,248,787,266) 相对模空间 $\overline{\mathcal{M}}_{g,n,\vec{\mu},A}(\underline{X}_a, Z_a)$ 参数化了到 $(\underline{X}_a, Z_a)$ 的如下的相对轨形稳定映射:
+
+![list](157,270,400,287)
+(1) 映射的原像曲线的亏格为 $g$ ;
+
+![list](121,291,885,351)
+(2) 此映射代表的下同调类为 $A \in H_2(|\underline{X}_a|; \mathbb{Z})$ , 且 $\vec{\mu} = (\mu_1, \ldots, \mu_{\ell(\vec{\mu})})$ 为相交数 $A \cdot [Z_a]$ 的一个由正有理数给出的划分, 表示映射与除子 $Z_a$ 相交后 $\ell(\vec{\mu})$ 个标识点, 并以 $\vec{\mu}$ 为相应的分数阶相交重数 (fractional contact order). 令 $|\vec{\mu}| = \sum_{i=1}^{\ell(\vec{\mu})} \mu_i$ , 则 $|\vec{\mu}| = A \cdot [Z_a]$ .
+
+![text](157,354,745,369) 前 $n$ 个标识点是非轨形标识点, 称为绝对标识点, 它们决定了如下的赋值映射
+
+![formula](335,386,671,407) $$
+\text{ev}_i : \overline{\mathcal{M}}_{g,n,\vec{\mu},A}(\underline{X}_a, Z_a) \to \underline{1X}_a, \quad 1 \leqslant i \leqslant n.
+$$
+
+![text](123,422,884,457) 同时, 它们还决定了 $n$ 个余切线丛 $L_i$ . 这些余切线丛的第一陈类也记为 $\bar{\psi}_i$ . 后 $\ell(\vec{\mu})$ 个标识点为相对标识点, 它们决定了 $\ell(\vec{\mu})$ 个赋值映射
+
+![formula](271,475,736,494) $$
+\text{rev}_i : \overline{\mathcal{M}}_{g,n,\vec{\mu},A}(\underline{X}_a, Z_a) \to Z_a(\{-\mu_i\}) \subseteq \underline{1Z}_a, \quad 1 \leqslant i \leqslant \ell(\vec{\mu}).
+$$
+
+![text](123,509,888,546) **定义 2.1** 取 $\underline{\alpha} = (\bar{\psi}^{a_1} \alpha_1, \ldots, \bar{\psi}^{a_n} \alpha_n) \in (\mathbb{C}[\bar{\psi}] \otimes H^*(\underline{X}_a))^{\otimes n}$ 与 $\underline{\epsilon} = (\epsilon_1, \ldots, \epsilon_{\ell(\vec{\mu})}) \in H^*(\underline{1Z}_a)^{\otimes \ell(\vec{\mu})}$ , 其中 $\epsilon_j \in H^*(Z_a(\{-\mu_j\}))$ . $(\underline{X}_a, Z_a)$ 的相对轨形 GW- 不变量定义为
+
+![formula](275,566,888,605) $$
+\langle \underline{\alpha} | \underline{\epsilon} \rangle_{g,n,\vec{\mu},A}^{(\underline{X}_a, Z_a)} := \int_{[\overline{\mathcal{M}}_{g,n,\vec{\mu},A}(\underline{X}_a, Z_a)]^{\text{vir}}} \prod_{i=1}^n \bar{\psi}_i^{a_i} \text{ev}_i^* \alpha_i \wedge \prod_{j=1}^{\ell(\vec{\mu})} \text{rev}_j^* \epsilon_j.
+\quad (2.1)
+$$
+
+![text](157,617,647,636) 模空间 $\overline{\mathcal{M}}_{g,n,\vec{\mu},A}(\underline{X}_a, Z_a)$ 的期望维数 (参见 [20, Lemma 3.1]) 为
+
+![formula](184,648,821,672) $$
+\text{vdim}_{\mathbb{C}} \overline{\mathcal{M}}_{g,n,\vec{\mu},A}(\underline{X}_a, Z_a) = c_1^{X_a}(A) + (\dim_{\mathbb{C}} X - 3)(1 - g) + n + \ell(\vec{\mu}) - \iota^{Z_a}(\underline{\epsilon}) - |\vec{\mu}|,
+$$
+
+![text](123,685,884,722) 类似于绝对 GW- 不变量, 当 $\frac{1}{2}(\deg \underline{\alpha} + \deg \underline{\epsilon}) \neq \text{vdim}_{\mathbb{C}} \overline{\mathcal{M}}_{g,n,\vec{\mu},A}(\underline{X}_a, Z_a)$ 时, 不变量定义为 0. 有关相对轨形 GW- 理论的构造与退化公式可以参见 [1, 10].
+
+![text](157,727,458,742) 为了后面使用方便, 我们引入两个记号:
+
+![formula](249,759,888,800) $$
+\iota^{Z_a}(\epsilon_j) := \iota^{Z_a}(\{-\mu_j\}) = \sum_{u=1}^{\kappa} \{-a_u \mu_j\}, \quad \text{和} \quad \iota^{Z_a}(\underline{\epsilon}) := \sum_{j=1}^{\ell(\vec{\mu})} \iota^{Z_a}(\epsilon_j).
+\quad (2.2)
+$$
+
+![title](121,812,456,829) ## 2.2 $\kappa = 1$ 时 \$(X, S)\$ 的相对 GW- 不变量
+
+![text](123,846,884,883) 当 $\kappa = 1$ 时, 我们也需要用到 \$(X, S)\$ 的相对不变量. 令 $\vec{\mu} = (\mu_1, \ldots, \mu_{\ell(\vec{\mu})})$ 为相交数 $A \cdot [S]$ 的由正整数给出的划分. 如此有 $|\vec{\mu}| := \sum_i \mu_i = A \cdot [S]$ .
+
+![text](157,887,665,903) 模空间 $\overline{\mathcal{M}}_{g,n,\vec{\mu},A}(X, S)$ 参数化了到 \$(X, S)\$ 的如下的相对稳定映射:
+
+![page_number](124,925,139,939) 6

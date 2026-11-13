@@ -1,0 +1,76 @@
+[project]
+name = "docparse"
+version = "0.1.0"
+description = "Local, batch-first document parser for RAG (LightOnOCR-3 on vLLM)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pypdfium2",
+    "pillow",
+    "pyarrow",
+    "polars",
+    "pydantic>=2",
+    "pydantic-settings",
+    "typer",
+    "httpx",
+    "puremagic",
+    "openpyxl",
+    "python-oxmsg",
+    "markdownify",
+    "lingua-language-detector",
+    "rapidfuzz",
+    "lxml",
+    "pyyaml",
+    # saturate==0.2.0 is added in P4
+    "saturate==0.2.0",
+]
+
+[project.scripts]
+docparse = "docparse.cli:app"
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+    "mypy",
+    "pip-licenses",
+    "pre-commit",
+    "reportlab",
+    "types-PyYAML",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/docparse", "config"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["gpu: needs a running vLLM server", "slow: long-running; excluded from make check"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests", "."]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "T20"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["T20", "E501"]
+"scripts/**" = ["T20"]
+"src/docparse/eval/**" = ["E501"]
+"src/docparse/bench/**" = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+mypy_path = "src"
+packages = ["docparse", "config"]
+
+[[tool.mypy.overrides]]
+module = ["pypdfium2", "pypdfium2.*", "pyarrow", "pyarrow.*", "lingua", "lingua.*", "puremagic", "openpyxl", "openpyxl.*", "saturate", "saturate.*", "lxml", "lxml.*"]
+ignore_missing_imports = true

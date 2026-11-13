@@ -1,0 +1,316 @@
+![table](16,56,768,881) <table>
+  <thead>
+    <tr>
+      <th>101</th>
+      <th>změna trasy / diversion</th>
+      <th>PRAŽSKA INTEGROVANA DOPRAVA (PID) - Městská doprava Praha</th>
+      <th>Platnost: od 1.7.2021</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Dopravce: Dopravní podnik hl. m. Prahy, akciová společnost,Sokolovská 42/217, Vysočany,190 00 Praha 9 Informace o provozu PID na tel.: 296 191 817; na internetu: www.dpp.cz</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>orientační doba jízdy (min)</td>
+      <td>Tarifní pásmo P</td>
+      <td>PRACOVNÍ DEN (×)</td>
+      <td>SOBOTA (⑥)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>NEDĚLE (†)</td>
+    </tr>
+    <tr>
+      <td>JESENICKÁ</td>
+      <td>4</td>
+      <td></td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Poliklinika Zahradní Město</td>
+      <td>5</td>
+      <td></td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>x Hlohová</td>
+      <td>6</td>
+      <td>07 37</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Centrum Zahradní Město</td>
+      <td>7</td>
+      <td>08 40</td>
+      <td>11 49</td>
+    </tr>
+    <tr>
+      <td>x Topolová</td>
+      <td>8</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>Záběhlická škola</td>
+      <td>9</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>x U Lípy</td>
+      <td>10</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>V Korytech</td>
+      <td>11</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>x Pod Vinicí</td>
+      <td>12</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>x Záběhlice</td>
+      <td>13</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>x Bohdalecká</td>
+      <td>14</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>Bohdalec</td>
+      <td>15</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>x Vršovický hřbitov</td>
+      <td>16</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>Koh-i-noor</td>
+      <td>17</td>
+      <td>10 40</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>• x Kavkazská</td>
+      <td>18</td>
+      <td>10 39</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>1 Slovinská</td>
+      <td>19</td>
+      <td>08 42</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>3 TOLSTÉHO</td>
+      <td>20</td>
+      <td>20 50</td>
+      <td>20 50</td>
+    </tr>
+    <tr>
+      <td>x - na znamení</td>
+      <td>21</td>
+      <td>18 48</td>
+      <td>18 48</td>
+    </tr>
+    <tr>
+      <td>※ - Všechny spoje zajišťuje nízkopodlažní vozidlo.</td>
+      <td>22</td>
+      <td>18 51</td>
+      <td>18 51</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>23</td>
+      <td>31</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>1</td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>2</td>
+      <td></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>3</td>
+      <td></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>35 33 31</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2 2 2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1 1 1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Platí Smluvní přepravní podmínky PID a Tarif PID. Jízda s předem zakoupeným jízdním dokladem. Území hl. m. Prahy se počítá jako 4 tarifní pásmo.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>O svátkích jde jako v neděli (†).</td>
+      <td></td>
+      <td>Soft. CHAPS spol. s r.o. A</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+![footer](19,905,462,925) Graf.: PV7044,V6735,V6736 Chron.: 32 Zast.: 189/1 Šabl.: Šablona 15|10|TP
+
+![footer](818,901,929,929) Prázdninový JŘ

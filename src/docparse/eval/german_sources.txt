@@ -1,0 +1,4 @@
+# One public German technical PDF URL per line (50 needed, each with a text layer).
+# Fetch into a folder, then: docparse inventory <folder> && docparse run --pass 1 && docparse qa --pass 1
+# && docparse eval german   (median recall and precision must both be >= 0.95).
+# Not populated: URLs must be chosen and checked by a person; none were invented here.

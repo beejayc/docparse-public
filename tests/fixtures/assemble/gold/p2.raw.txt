@@ -1,0 +1,14 @@
+![title](60,60,940,110) Regional table
+
+![text](60,130,940,200) The table below lists revenue and costs per region.
+
+![chart](100,220,900,420) <table><thead><tr><th>Quarter</th><th>Revenue</th></tr></thead><tbody><tr><td>Q1</td><td>100</td></tr><tr><td>Q2</td><td>140</td></tr></tbody></table>
+
+![table](60,440,940,900) <table>
+<thead><tr><th>Region</th><th>Revenue</th><th>Costs</th></tr></thead>
+<tbody>
+<tr><td>R1</td><td>100</td><td>40</td></tr>
+<tr><td>R2</td><td>200</td><td>80</td></tr>
+</tbody></table>
+
+![footer](60,940,940,970) Confidential

@@ -1,0 +1,32 @@
+# Any NVIDIA GPU host (Linux amd64/arm64, or Windows via WSL2/Docker Desktop). No CPU pinning:
+# portable defaults, tune with `docparse bench`. 16+ GB VRAM; lower gpu_memory_utilization if the GPU is shared.
+# Image tag assumed from the aarch64 tag verified on gb10; check it exists for your platform or set VLLM_IMAGE.
+name: generic
+endpoint: http://localhost:8000
+vllm:
+  image: vllm/vllm-openai:v0.33.0
+  models:
+    fast:     {id: lightonai/LightOnOCR-3-0.8B, revision: 36d8636925327c671bd8e479c517a004f7566bd9}
+    accurate: {id: lightonai/LightOnOCR-3-4B,   revision: b71010f095dc3735de7ee6b9969bff8f8f50b39a}
+  max_num_seqs: 128
+  api_servers: 1
+  gpu_memory_utilization: 0.85
+  max_model_len: 12288
+  max_num_batched_tokens: 16384
+  cpuset: ""
+render:
+  mode: direct
+  longest_side_px: 2048
+  workers: 3
+  cpuset: ""
+  pdf_cache_size: 4
+  png_compress_level: 1
+cpu_other:
+  workers: 4
+  cpuset: ""
+  nice: 10
+sampling:
+  temperature: 0.2
+  top_p: 0.9
+  max_tokens: {pass1: 4096, pass2: 8192}
+measured: {}

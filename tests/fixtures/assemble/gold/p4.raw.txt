@@ -1,0 +1,11 @@
+![title](60,60,940,110) Detailed results
+
+![table](60,130,940,500) <table>
+<thead><tr><th rowspan="2">Group</th><th colspan="2">Score</th></tr><tr><th>Mean</th><th>Std</th></tr></thead>
+<tbody><tr><td>A</td><td>1.5</td><td>0.2</td></tr><tr><td>B</td><td>2.5</td><td>0.3</td></tr></tbody></table>
+
+![caption](60,510,940,560) **Table 2.** Scores by group.
+
+![formula](300,600,700,660) $$
+E = mc^2
+$$

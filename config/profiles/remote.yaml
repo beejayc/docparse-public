@@ -1,0 +1,31 @@
+# No local GPU (macOS, native Windows, CPU-only Linux). Everything except the model runs here;
+# the OpenAI-compatible vLLM server runs elsewhere. Point at it with --endpoint or DOCPARSE_ENDPOINT.
+name: remote
+endpoint: http://localhost:8000
+vllm:
+  image: vllm/vllm-openai:v0.33.0     # unused locally; kept so the schema stays one shape
+  models:
+    fast:     {id: lightonai/LightOnOCR-3-0.8B, revision: 36d8636925327c671bd8e479c517a004f7566bd9}
+    accurate: {id: lightonai/LightOnOCR-3-4B,   revision: b71010f095dc3735de7ee6b9969bff8f8f50b39a}
+  max_num_seqs: 128
+  api_servers: 1
+  gpu_memory_utilization: 0.85
+  max_model_len: 12288
+  max_num_batched_tokens: 16384
+  cpuset: ""
+render:
+  mode: direct
+  longest_side_px: 2048
+  workers: 2
+  cpuset: ""
+  pdf_cache_size: 4
+  png_compress_level: 1
+cpu_other:
+  workers: 2
+  cpuset: ""
+  nice: 10
+sampling:
+  temperature: 0.2
+  top_p: 0.9
+  max_tokens: {pass1: 4096, pass2: 8192}
+measured: {}

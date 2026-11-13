@@ -1,0 +1,15 @@
+.git
+.venv
+.scratch
+.mypy_cache
+.ruff_cache
+.pytest_cache
+__pycache__
+dataset
+out
+work
+manifest
+data
+docker/.env.vllm
+tests
+docs

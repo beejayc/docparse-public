@@ -1,0 +1,8 @@
+![list](60,60,940,250)
+- first item
+- second item
+- third item
+
+![text](60,270,940,400) Closing remarks with a footnote reference.
+
+![footnote](60,880,940,930) 1. Figures are unaudited.

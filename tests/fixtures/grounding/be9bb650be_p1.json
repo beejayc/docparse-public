@@ -1,0 +1,9 @@
+{
+ "finish_reason": "stop",
+ "prompt_tokens": 2704,
+ "completion_tokens": 1368,
+ "model": "lightonai/LightOnOCR-3-0.8B",
+ "latency_s": 11.906,
+ "page_id": "be9bb650be67b6fe:00001",
+ "name": "be9bb650be_p1"
+}

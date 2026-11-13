@@ -1,0 +1,81 @@
+![title](69,91,228,107) 4.3 Spectral analysis
+
+![text](69,124,462,181) We can now derive specific spectral properties of the Koopman operator that we will leverage for state estimation. Those properties require the following additional assumptions on the nonlinear system (6).
+
+![text](84,196,462,279) **Assumption 3 (stable hyperbolic equilibrium).** The dynamics admits a stable equilibrium at the origin, whose basin of attraction contains the polydisc $\mathbb{D}^n$ . Moreover, the eigenvalues $\lambda_j$ of the Jacobian matrix $\mathcal{J}_F(\mathbf{0})$ are simple and satisfy $\text{Re}(\lambda_j) < 0$ for all $j = 1, \ldots, n$ .
+
+![text](84,291,462,349) **Assumption 4 (non-resonant eigenvalues).** The eigenvalues $\lambda_j$ of the Jacobian matrix $\mathcal{J}_F(\mathbf{0})$ are non-resonant, i.e. for all $(m_1, \ldots, m_n) \in \mathbb{N}^n$ satisfying $\sum_{l=1}^n m_l \geq 2$ ,
+
+![formula](164,362,380,407) $$
+\lambda_j \neq \sum_{l=1}^n m_l \lambda_l, \; \forall j = 1, \ldots, n.
+$$
+
+![text](85,416,462,445) **Assumption 5 (output map).** The components of the output map $h$ belong to $\mathbb{H}^2(\mathbb{D}^n)$ .
+
+![text](69,460,464,584) **Remark 14** Nonresonant eigenvalues are required to rely on the Poincaré-Dulac linearization theorem. However, other linearization theorems exist, with different assumptions, see e.g. the Siegle-Bruno theorem in [Bernard, 2023]. In [Krener and MingQing, 2001], similar assumptions were considered to obtain a necessary and sufficient condition for the existence of a change of variable that linearizes the dynamics up to a nonlinear injection term.
+
+![text](69,600,462,655) The first remarkable property resulting from those assumptions is the fact that the operators $A_F$ and $A_F^*$ admit a series expansion that allows to represent both operators as infinite matrices.
+
+![text](69,670,296,685) **Lemma 15** For all $f \in D(A_F)$ ,
+
+![formula](142,700,388,750) $$
+A_F f = \sum_{\alpha \in \mathbb{N}^n} \left( \sum_{\beta \in \mathbb{N}^n} A_{F\alpha,\beta} f_\beta \right) e_\alpha
+$$
+
+![text](71,761,382,777) where $f_\beta = \langle f, e_\beta \rangle$ and $A_{F\alpha,\beta} = \langle A_F e_\beta, e_\alpha \rangle$ .
+
+![text](69,803,462,848) **PROOF.** Since $\{e_\alpha\}_{\alpha \in \mathbb{N}^n}$ is an orthonormal basis of $\mathbb{H}^2(\mathbb{D}^n)$ , any $f \in D(A_F)$ can be expanded as $f = \sum_{\beta \in \mathbb{N}^n} f_\beta e_\beta$ . Hence, we can prove that
+
+![formula](142,866,462,914) $$
+A_F \left( \sum_{\beta \in \mathbb{N}^n} f_\beta e_\beta \right) = \sum_{\beta \in \mathbb{N}^n} f_\beta A_F e_\beta. \quad (15)
+$$
+
+![text](497,92,890,120) Indeed, in [Mugisho and Mauroy, 2024], it is shown that the right-hand side is given by
+
+![formula](519,135,892,229) $$
+\sum_{\beta \in \mathbb{N}^n} f_\beta A_F e_\beta = \sum_{l=1}^n F_l \sum_{\beta \in \mathbb{N}^n} (\beta_l + 1) f_{(\beta_1, \ldots, \beta_{l-1}, \beta_l + 1, \beta_{l+1}, \ldots, \beta_n)} e_\beta. \quad (16)
+$$
+
+![text](497,244,890,283) It remains to show that the left-hand side of (15) is also equal to the right-hand side of (16). To do so, consider the operators $A_1$ and $A_2$ given by
+
+![formula](589,299,798,316) $$
+A_1 f = \nabla f \text{ and } A_2 \omega = F \cdot \omega,
+$$
+
+![text](497,329,890,374) for all $f \in D(A_F)$ and $\omega \in (\text{Hol}(\mathbb{D}^n))^n$ , respectively. Observe that $A_F = A_2 A_1$ on $D(A_F)$ . Moreover, for all $f \in D(A_F)$ and for all $l = 1, \ldots, n$ ,
+
+![formula](511,388,873,424) $$
+(A_1 f)_l = \sum_{\beta \in \mathbb{N}^n} (\beta_l + 1) f_{(\beta_1, \ldots, \beta_{l-1}, \beta_l + 1, \beta_{l+1}, \ldots, \beta_n)} e_\beta.
+$$
+
+![text](497,438,682,453) Hence, for all $f \in D(A_F)$ ,
+
+![formula](500,468,889,527) $$
+A_F f = A_2 A_1 f = \sum_{l=1}^n F_l \sum_{\beta \in \mathbb{N}^n} (\beta_l + 1) f_{(\beta_1, \ldots, \beta_{l-1}, \beta_l + 1, \beta_{l+1}, \ldots, \beta_n)} e_\beta.
+$$
+
+![text](497,542,890,569) In view of (16), it follows that identity (15) holds, which implies that
+
+![formula](549,585,840,701) $$
+A_F f = \sum_{\alpha \in \mathbb{N}^n} \langle A_F f, e_\alpha \rangle e_\alpha = \sum_{\alpha \in \mathbb{N}^n} \left\langle A_F \left( \sum_{\beta \in \mathbb{N}^n} f_\beta e_\beta \right), e_\alpha \right\rangle e_\alpha = \sum_{\alpha \in \mathbb{N}^n} \sum_{\beta \in \mathbb{N}^n} \langle A_F e_\beta, e_\alpha \rangle f_\beta e_\alpha.
+$$
+
+![text](497,766,890,805) $\blacksquare$
+
+It is proved in [Mugisho and Mauroy, 2024] that the infinite matrix representation $\mathcal{A}_F$ of the operator $A_F$ is lower block triangular of the form
+
+![formula](527,824,894,911) $$
+\mathcal{A}_F f = \begin{pmatrix}
+[0] & \cdots \\
+[0] & [\mathcal{A}_{11}] & [0] & \cdots \\
+[0] & [\mathcal{A}_{21}] & [\mathcal{A}_{22}] & [0] & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix} \begin{pmatrix}
+[f_0] \\
+[f_1] \\
+[f_2] \\
+\vdots
+\end{pmatrix}, \quad (17)
+$$
+
+![page_number](472,945,486,959) 8
