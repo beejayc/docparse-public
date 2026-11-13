@@ -27,6 +27,14 @@ out/docs/{doc_id}/
   meta.json          # source paths, models, profile, QA summary, parser version
 ```
 
+### Architecture 
+<img width="1090" height="733" alt="DataPipeline(1)" src="https://github.com/user-attachments/assets/0d2de883-553a-4f2d-a078-56d9252a213e" />
+
+
+
+
+
+
 ## Quick start
 
 One command, any machine with Docker and an NVIDIA GPU (details per platform below):
