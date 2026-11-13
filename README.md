@@ -177,3 +177,19 @@ make check   # ruff + mypy --strict + pytest + licence gate
 ```
 
 Permissive dependencies only (Apache, MIT, BSD); the licence gate runs in `make check` and when building the parser image.
+
+## Credits
+
+docparse is glue around other people's work. Thanks to:
+
+- [LightOn](https://huggingface.co/lightonai) for the LightOnOCR-3 models (0.8B and 4B), which do all the reading.
+- The [vLLM](https://github.com/vllm-project/vllm) project for the model server.
+- [saturate](https://pypi.org/project/saturate/) for the adaptive batch driver.
+- [pypdfium2](https://github.com/pypdfium2-team/pypdfium2) and [PDFium](https://pdfium.googlesource.com/pdfium/) for PDF rendering and text layers.
+- [LibreOffice](https://www.libreoffice.org/) (run as a separate process) for DOCX/PPTX conversion.
+- Evaluation: [olmOCR-Bench](https://github.com/allenai/olmocr) from Ai2 and [OmniDocBench](https://github.com/opendatalab/OmniDocBench) from OpenDataLab. The scorers in `src/docparse/eval/` are local re-implementations written for this project and give approximate results, not the official numbers.
+- Libraries: Pillow, PyArrow, Polars, Pydantic, Typer, httpx, lxml, openpyxl, python-oxmsg, markdownify, rapidfuzz, lingua-language-detector, puremagic and PyYAML.
+
+## Licence
+
+Apache License 2.0. See [LICENSE](LICENSE). Dependencies keep their own licences.
